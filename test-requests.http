@@ -1,52 +1,52 @@
 ### CREATE five documents.
-POST http://localhost:3000/movies HTTP/1.1
+POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Sorry to Bother You",
-    "year": 2019,
-    "language": "English"
+    "title": "Star Wars Jedi:Survivor",
+    "timeToBeat": 30,
+    "releaseDate": "04-03-2023"
 }
 
 
 ### CREATE 2
-POST http://localhost:3000/movies HTTP/1.1
+POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Eternal Sunshine Of The Spotless Mind",
-    "year": 2004,
-    "language": "Arabic"
+     "title": "Alan Wake Remastered",
+    "timeToBeat": 12,
+    "releaseDate": "03-14-2023"
 }
 
 ### CREATE 3
-POST http://localhost:3000/movies HTTP/1.1
+POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-    "title": "High Fidelity",
-    "year": 2000,
-    "language": "French"
+     "title": "Hifi Rush",
+    "timeToBeat": 10,
+    "releaseDate": "04-17-2023"
 }
 
 ### CREATE 4
-POST http://localhost:3000/movies HTTP/1.1
+POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Anchorman",
-    "year": 2004,
-    "language": "Korean"
+    "title": "Destiny 2",
+    "timeToBeat": 100,
+    "releaseDate": "02-12-2020"
 }
 
 ### CREATE 5
-POST http://localhost:3000/movies HTTP/1.1
+POST http://localhost:3000/games HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Parasite",
-    "year": 2019,
-    "language": "Korean"
+   "title": "Dead Space",
+    "timeToBeat": 22,
+    "releaseDate": "01-03-2023"
 }
 
 
