@@ -1,0 +1,26 @@
+{
+  "name": "game-backlog",
+  "version": "1.0.0",
+  "description": "tracks gaming backlog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon controller.mjs"
+  },
+  "keywords": [
+    "games",
+    "react",
+    "node",
+    "express",
+    "mongo"
+  ],
+  "author": "Steve Rector",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.2",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2",
+    "nodemon": "^2.0.22",
+    "rest": "^2.0.0"
+  }
+}
