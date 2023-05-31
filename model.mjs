@@ -24,10 +24,10 @@ const gameSchema = mongoose.Schema({
     releaseDate: {type: Date, default: Date.now, required: true}
 });
 
-// Compile the model from the schema.
+// Compile the MODEL from the schema.
 const Game = mongoose.model("Game", gameSchema)
 
-// Creates new Game document 
+// CREATE new Game document 
 const createGame = async (title, timeToBeat, releaseDate) => {
     const game = new Game({
         title: title,
@@ -38,18 +38,19 @@ const createGame = async (title, timeToBeat, releaseDate) => {
     return game.save();
 };
 
-// Retrieves all Game documents 
+// RETRIEVE all Game documents 
 const retrieveGames = async () => {
     const query = Game.find();
     return query.exec();
 };
 
-// Retrieves specific Game document by ID
+// RETRIEVE specific Game document by ID
 const retrieveGameByID = async (_id) => {
-    const query = Game.findById({_id: _id})
+    const query = Game.findById({_id: _id});
     return query.exec();
 };
 
+// UPDATE specific Game by ID with the newly provided information
 const updateGame = async (_id, title, timeToBeat, releaseDate) => {
     const result = await Game.replaceOne({_id: _id}, {
         title: title,
@@ -62,5 +63,15 @@ const updateGame = async (_id, title, timeToBeat, releaseDate) => {
         title: title,
         timeToBeat: timeToBeat,
         releaseDate: releaseDate
-    }
+    };
 };
+
+// DELETE specific game by ID
+const deleteGameByID = async (_id) => {
+    const result = await Game.deleteOne({_id: _id});
+    return result.deletedCount;
+};
+
+
+// Exports variables defined above for use in controller.mjs file 
+export {createGame, retrieveGames, retrieveGameByID, updateGame, deleteGameByID};
