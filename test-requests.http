@@ -4,7 +4,7 @@ content-type: application/json
 
 {
     "title": "Star Wars Jedi:Survivor",
-    "timeToBeat": 30,
+    "hoursToBeat": 30,
     "releaseDate": "04-03-2023"
 }
 
@@ -15,7 +15,7 @@ content-type: application/json
 
 {
      "title": "Alan Wake Remastered",
-    "timeToBeat": 12,
+    "hoursToBeat": 12,
     "releaseDate": "03-14-2023"
 }
 
@@ -25,7 +25,7 @@ content-type: application/json
 
 {
      "title": "Hifi Rush",
-    "timeToBeat": 10,
+    "hoursToBeat": 10,
     "releaseDate": "04-17-2023"
 }
 
@@ -35,7 +35,7 @@ content-type: application/json
 
 {
     "title": "Destiny 2",
-    "timeToBeat": 100,
+    "hoursToBeat": 100,
     "releaseDate": "02-12-2020"
 }
 
@@ -45,19 +45,19 @@ content-type: application/json
 
 {
    "title": "Dead Space",
-    "timeToBeat": 22,
+    "hoursToBeat": 22,
     "releaseDate": "01-03-2023"
 }
 
 
 ### RETRIEVE all documents.
-GET http://localhost:3000/movies HTTP/1.1
+GET http://localhost:3000/games HTTP/1.1
 
 
 
 ### RETRIEVE a document by its ID.
 ### Replace the following ID with one that exists in the collection.
-GET http://localhost:3000/movies/63fe46f07cdabdac528b7ee3 HTTP/1.1
+GET http://localhost:3000/games/6477a8234872b5f640e4fc06 HTTP/1.1
 
 
 ### UPDATE one document's year, by ID.

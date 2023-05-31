@@ -10,7 +10,7 @@ app.use(express.json());
 app.post('/games', (req, res) => {
     games.createGame(
         req.body.title,
-        req.body.timeToBeat,
+        req.body.hoursToBeat,
         req.body.releaseDate
     )
     .then(game => {

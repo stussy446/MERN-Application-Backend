@@ -20,7 +20,7 @@ db.once("open", (err) => {
 // SCHEMA: Define the collection's schema.
 const gameSchema = mongoose.Schema({
     title: {type: String, required: true},
-    timeToBeat: {type: Number, required: true},
+    hoursToBeat: {type: Number, required: true},
     releaseDate: {type: Date, default: Date.now, required: true}
 });
 
@@ -28,10 +28,10 @@ const gameSchema = mongoose.Schema({
 const Game = mongoose.model("Game", gameSchema)
 
 // CREATE new Game document 
-const createGame = async (title, timeToBeat, releaseDate) => {
+const createGame = async (title, hoursToBeat, releaseDate) => {
     const game = new Game({
         title: title,
-        timeToBeat: timeToBeat,
+        hoursToBeat: hoursToBeat,
         releaseDate: releaseDate
     });
 
@@ -51,17 +51,17 @@ const retrieveGameByID = async (_id) => {
 };
 
 // UPDATE specific Game by ID with the newly provided information
-const updateGame = async (_id, title, timeToBeat, releaseDate) => {
+const updateGame = async (_id, title, hoursToBeat, releaseDate) => {
     const result = await Game.replaceOne({_id: _id}, {
         title: title,
-        timeToBeat: timeToBeat,
+        hoursToBeat: hoursToBeat,
         releaseDate: releaseDate
     });
 
     return {
         _id: _id,
         title: title,
-        timeToBeat: timeToBeat,
+        hoursToBeat: hoursToBeat,
         releaseDate: releaseDate
     };
 };
