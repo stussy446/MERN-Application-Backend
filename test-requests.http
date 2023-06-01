@@ -63,13 +63,13 @@ GET http://localhost:3000/games/6477a8234872b5f640e4fc06 HTTP/1.1
 ### UPDATE one document's year, by ID.
 ### Replace the id in the following request with one that exists
 ### and update the title, year, and/or language:
-PUT http://localhost:3000/movies/63fe444e0dd596fe1eaaaec1 HTTP/1.1
+PUT http://localhost:3000/games/6477a8234872b5f640e4fc06 HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Sorry to Bother You",
-    "year": 2016,
-    "language": "English"
+    "title": "Replacement Game",
+    "hoursToBeat": 1,
+    "releaseDate": "01-01-1992"
 }
 
 ### DELETE by ID (no response provided)

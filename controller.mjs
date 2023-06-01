@@ -54,6 +54,23 @@ app.get('/games/:_id', (req, res) =>{
     });
 });
 
+// UPDATE one game based on the provided _id, or throws error if problem occurs 
+app.put('/games/:_id', (req, res) => {
+    games.updateGame(
+        req.params._id,
+        req.body.title,
+        req.body.hoursToBeat,
+        req.body.releaseDate
+    )
+    .then(game => {
+        res.json(game);
+    })
+    .catch(error => {
+        console.log(error);
+        res.status(400).json({Error: 'Update of game document failed.'});
+    });
+});
+
 
 
 // Sets the application to listen on port provided in .env file
