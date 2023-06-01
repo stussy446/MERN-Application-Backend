@@ -73,9 +73,9 @@ content-type: application/json
 }
 
 ### DELETE by ID (no response provided)
-DELETE http://localhost:3000/movies/63fe444e0dd596fe1eaaaec1 HTTP/1.1
+DELETE http://localhost:3000/games/6477a8234872b5f640e4fc06 HTTP/1.1
 
 
 ### DELETEs ALL documents!
-DELETE http://localhost:3000/movies/ HTTP/1.1
+DELETE http://localhost:3000/games/ HTTP/1.1
 

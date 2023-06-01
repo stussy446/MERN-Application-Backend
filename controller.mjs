@@ -71,6 +71,22 @@ app.put('/games/:_id', (req, res) => {
     });
 });
 
+// DELETE one game based on the provided _id, or throws error if problem persists
+app.delete('/games/:_id', (req, res) => {
+    games.deleteGameByID(req.params._id)
+    .then(deletedCount => {
+        if (deletedCount == 1){
+            res.status(204).send();
+        } else {
+            res.status(404).json({Error: 'Game could not be found or no longer exists.'});
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        res.send(400).json({Error: 'Deletion of game document failed.'})
+    });
+});
+
 
 
 // Sets the application to listen on port provided in .env file
