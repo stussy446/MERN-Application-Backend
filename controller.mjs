@@ -6,7 +6,7 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());  
 
-// CREATE game and saves document to the database, or throws error if a problem occurs
+// CREATEyay game and saves document to the database, or throws error if a problem occurs
 app.post('/games', (req, res) => {
     games.createGame(
         req.body.title,
